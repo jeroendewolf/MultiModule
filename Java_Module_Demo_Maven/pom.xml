@@ -7,95 +7,21 @@
 	<artifactId>java9modules</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
 	<modules>
 		<module>com.vijfhart.cursus.demo</module>
 		<module>com.vijfhart.cursus.democlient</module>
 	</modules>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.plugin>3.8.0</maven.compiler.plugin>
-		<maven.toolchains.plugin>3.0.0</maven.toolchains.plugin>
 	</properties>
-
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>${maven.compiler.plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-toolchains-plugin</artifactId>
-					<version>${maven.toolchains.plugin}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-toolchains-plugin</artifactId>
-				<configuration>
-					<toolchains>
-						<jdk>
-							<version>${jdk.version}</version>
-							<vendor>${jdk.vendor}</vendor>
-						</jdk>
-					</toolchains>
-				</configuration>
-				<executions>
-					<execution>
-                        <?m2e ignore ?>
-						<goals>
-							<goal>toolchain</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven.compiler.plugin}</version>
+		</plugin>
+	</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>java9</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<maven.compiler.source>1.9</maven.compiler.source>
-				<maven.compiler.target>1.9</maven.compiler.target>
-				<maven.compiler.release>9</maven.compiler.release>
-				<jdk.vendor>oracle</jdk.vendor>
-				<jdk.version>9</jdk.version>
-			</properties>
-		</profile>
-		<profile>
-			<id>java10</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<properties>
-				<maven.compiler.source>1.10</maven.compiler.source>
-				<maven.compiler.target>10</maven.compiler.target>
-				<maven.compiler.release>10</maven.compiler.release>
-				<jdk.vendor>oracle</jdk.vendor>
-				<jdk.version>10</jdk.version>
-			</properties>
-		</profile>
-		<profile>
-			<id>java11</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<properties>
-				<maven.compiler.source>1.11</maven.compiler.source>
-				<maven.compiler.target>11</maven.compiler.target>
-				<maven.compiler.release>11</maven.compiler.release>
-				<jdk.vendor>openjdk</jdk.vendor>
-				<jdk.version>11</jdk.version>
-			</properties>
-		</profile>
-	</profiles>
 </project>
