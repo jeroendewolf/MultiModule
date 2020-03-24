@@ -74,7 +74,7 @@ Older versions of the Maven compiler plugin use an old version of asm.jar incomp
   	  	</dependencies>
 	</plugin>
 	
-**2.3. The Maven jar plugin is instructed to build the jars to the specified directory
+**2.3. The Maven jar plugin is instructed to build the jars to the specified directory**
 	
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
