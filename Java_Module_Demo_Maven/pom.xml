@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vijfhart.cursus</groupId>
 	<artifactId>javamodules</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>pom</packaging>
 	<modules>
 		<module>com.vijfhart.cursus.demo</module>
@@ -20,19 +20,19 @@
 	</properties>
 	<build>
 		<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>${maven.compiler.plugin}</version>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<version>${maven.jar.plugin}</version>
-			<configuration>
-				<outputDirectory>${project.build.directory}/../../target/jars</outputDirectory>
-			</configuration>
-		</plugin>
-	</plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${maven.jar.plugin}</version>
+				<configuration>
+					<outputDirectory>${project.build.directory}/../../target/jars</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
