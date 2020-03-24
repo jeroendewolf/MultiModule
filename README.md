@@ -2,8 +2,8 @@
 	
 The examples demonstrate migrating a Java multi module project . 
 
-1. Building a multi-module Java 9 project from the command line 
-2. Building a multi-module Java 9 project with Maven
+1. Building a multi-module Java project from the command line 
+2. Building a multi-module Java project with Maven
 	
 
 **1. Building a multi module project from the command line**
@@ -50,13 +50,12 @@ The examples demonstrate migrating a Java multi module project .
 
 **2. Building a multi-module Java 9 project with Maven** 
 
-**2.2 Use the maven compiler plugin version 3.8.0**
+**2.2 Use the maven compiler plugin version 3.8.0 and set source and target release to 11**
 
 	<properties>
 		<maven.compiler.plugin>3.8.0</maven.compiler.plugin>
-		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
 
 Older versions of the Maven compiler plugin use an old version of asm.jar incompatible with Java10 or 11. To force a newer version, add this dependency to the compiler plugin.
