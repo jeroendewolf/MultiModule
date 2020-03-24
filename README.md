@@ -48,7 +48,7 @@ The examples demonstrate migrating a Java multi module project .
   	democlient\bin\demo
 	  
 
-**2. Building a multi-module Java 9 project with Maven** 
+**2. Building a multi-module Java project with Maven** 
 
 **2.2 Use the maven compiler plugin version 3.8.0 and set source and target release to 11**
 
@@ -61,15 +61,26 @@ The examples demonstrate migrating a Java multi module project .
 Older versions of the Maven compiler plugin use an old version of asm.jar incompatible with Java10 or 11. To force a newer version, add this dependency to the compiler plugin.
 
 	<plugin>
-  	  <groupId>org.apache.maven.plugins</groupId>
-  	  <artifactId>maven-compiler-plugin</artifactId>
-  	  <dependencies>
-    	    <dependency>
-      	      <groupId>org.ow2.asm</groupId>
-      	      <artifactId>asm</artifactId>
-      	      <version>6.2</version>
-    	    </dependency>
-  	  </dependencies>
+  		<groupId>org.apache.maven.plugins</groupId>
+  	  	<artifactId>maven-compiler-plugin</artifactId>
+  	  	<dependencies>
+    	    		<dependency>
+      	      			<groupId>org.ow2.asm</groupId>
+      	      			<artifactId>asm</artifactId>
+      	      			<version>6.2</version>
+    	    		</dependency>
+  	  	</dependencies>
+	</plugin>
+	
+**2.3. The Maven jar plugin is instructed to build the jars to the specified directory
+	
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+		<version>${maven.jar.plugin}</version>
+		<configuration>
+			<outputDirectory>${project.build.directory}/../../target/jars</outputDirectory>
+		</configuration>
 	</plugin>
 
 
