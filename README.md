@@ -65,13 +65,13 @@ Older versions of the Maven compiler plugin use an old version of asm.jar incomp
 	<plugin>
   		<groupId>org.apache.maven.plugins</groupId>
   	  	<artifactId>maven-compiler-plugin</artifactId>
-  	  	<dependencies>
-    	    		<dependency>
-      	      			<groupId>org.ow2.asm</groupId>
-      	      			<artifactId>asm</artifactId>
-      	      			<version>6.2</version>
-    	    		</dependency>
-  	  	</dependencies>
+		<dependencies>
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>6.2</version>
+			</dependency>
+		</dependencies>
 	</plugin>
 	
 **2.3. The Maven jar plugin is instructed to build the jars to the specified directory**
