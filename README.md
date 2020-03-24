@@ -1,6 +1,6 @@
 **Multi Module Java 11**
 	
-The examples demonstrate migrating a Java multi module project . 
+This example demonstrates a 11 Java multi module project 
 
 1. Building a multi-module Java project from the command line 
 2. Building a multi-module Java project with Maven
