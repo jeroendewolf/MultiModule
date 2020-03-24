@@ -18,6 +18,7 @@ This example demonstrates a 11 Java multi module project
 	
 **1.2. Create JAR files**
 	
+	mkdir target
   	jar -cf target\demo.jar -C mods\com.vijfhart.cursus.demo .
   	jar -cfe target\democlient.jar com.vijfhart.cursus.democlient.Main -C mods\com.vijfhart.cursus.democlient .
 	
