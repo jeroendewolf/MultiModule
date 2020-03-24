@@ -28,6 +28,7 @@ This example demonstrates a 11 Java multi module project
 	
 **1.4. Create jmod files**
 	
+	mkdir jmods
   	jmod create --class-path target\demo.jar jmods\demo.jmod
   	jmod create --class-path target\democlient.jar jmods\democlient.jmod
 	
