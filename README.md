@@ -21,6 +21,10 @@ This example demonstrates a 11 Java multi module project
 	javac -d mods --module-source-path src --module com.vijfhart.cursus.demo
 	javac -d mods --module-source-path src --module com.vijfhart.cursus.democlient
 	
+	or combined
+	
+	javac -d mods --module-source-path src --module com.vijfhart.cursus.demo, com.vijfhart.cursus.democlient
+		
 	and even if only the module that requires demo is compiled, demo is automatically compiled along
 	
 	javac -d mods --module-source-path src --module com.vijfhart.cursus.democlient
